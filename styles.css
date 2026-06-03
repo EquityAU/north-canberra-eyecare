@@ -715,110 +715,102 @@ textarea {
     margin-top: 6px;
   }
 
+  .hero {
+    border-bottom: 0;
+    background: var(--jet);
+  }
+
   .hero::before {
-    top: auto;
+    top: 0;
     right: 0;
-    bottom: 0;
+    bottom: auto;
     left: 0;
-    height: 52%;
-    background: url("assets/clinic-hero.webp") center right / cover no-repeat;
-    opacity: 0.32;
+    height: 42%;
+    background: url("assets/eye-test.webp") center / cover no-repeat;
+    opacity: 1;
+    filter: saturate(0.92) contrast(1);
+    transform: none;
   }
 
   .hero::after {
     background:
-      linear-gradient(180deg, rgba(255, 255, 255, 0.99) 0%, rgba(255, 255, 255, 0.96) 43%, rgba(247, 247, 246, 0.7) 68%, rgba(36, 47, 64, 0.16) 100%),
-      radial-gradient(circle at 12% 12%, rgba(204, 164, 59, 0.18), rgba(204, 164, 59, 0) 34%),
-      linear-gradient(90deg, rgba(255, 255, 255, 0.99), rgba(255, 255, 255, 0.64));
+      linear-gradient(180deg, rgba(36, 47, 64, 0.02) 0%, rgba(36, 47, 64, 0.08) 25%, rgba(36, 47, 64, 0.9) 42%, rgba(36, 47, 64, 0.98) 100%),
+      radial-gradient(circle at 12% 48%, rgba(204, 164, 59, 0.28), rgba(204, 164, 59, 0) 30%);
   }
 
   .hero-inner {
-    min-height: 720px;
-    align-items: start;
-    padding: 42px 0 116px;
+    min-height: calc(100svh - 66px);
+    align-items: end;
+    padding: 268px 0 118px;
   }
 
   .hero-copy {
-    width: min(100%, 560px);
+    width: min(100%, 590px);
     display: flex;
     flex-direction: column;
-  }
-
-  .hero-mobile-card {
-    position: relative;
-    display: grid;
-    grid-template-columns: 0.78fr 1fr;
-    align-items: end;
-    gap: 0;
-    min-height: 158px;
-    margin-top: 28px;
-    overflow: hidden;
-    border: 1px solid rgba(229, 229, 229, 0.96);
-    border-radius: var(--radius);
-    background: var(--white);
-    box-shadow: 0 18px 48px rgba(36, 47, 64, 0.16);
-  }
-
-  .hero-mobile-card img {
-    width: 100%;
-    height: 100%;
-    min-height: 158px;
-    object-fit: cover;
-    object-position: center right;
-    filter: saturate(0.86) contrast(0.95);
-  }
-
-  .hero-mobile-panel {
-    display: grid;
-    gap: 8px;
-    min-height: 158px;
-    align-content: center;
-    padding: 18px;
-    border-left: 3px solid var(--bronze);
-    background:
-      linear-gradient(135deg, rgba(36, 47, 64, 0.98), rgba(54, 54, 54, 0.94));
     color: var(--white);
   }
 
-  .hero-mobile-panel span {
-    color: var(--bronze);
-    font-size: 0.72rem;
-    font-weight: 820;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
+  .hero-mobile-card {
+    display: none;
   }
 
-  .hero-mobile-panel strong {
-    font-size: 1rem;
-    line-height: 1.24;
+  .hero .eyebrow {
+    color: rgba(255, 255, 255, 0.82);
+  }
+
+  .hero .eyebrow::before {
+    background: var(--bronze);
+  }
+
+  .hero h1 {
+    color: var(--white);
+    text-shadow: 0 18px 46px rgba(0, 0, 0, 0.22);
+  }
+
+  .hero .lead {
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 12px 28px rgba(0, 0, 0, 0.16);
+  }
+
+  .hero .button-primary {
+    color: var(--jet);
+    background: var(--white);
+    box-shadow: 0 18px 42px rgba(0, 0, 0, 0.24);
+  }
+
+  .hero .button-secondary {
+    color: var(--white);
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.28);
+    backdrop-filter: blur(12px);
   }
 
   .hero-mobile-stats {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1px;
-    margin-top: 10px;
-    overflow: hidden;
-    border: 1px solid rgba(204, 164, 59, 0.32);
-    border-radius: var(--radius);
-    background: rgba(204, 164, 59, 0.38);
-    box-shadow: 0 12px 30px rgba(36, 47, 64, 0.1);
+    gap: 8px;
+    order: 4;
+    margin-top: 22px;
   }
 
   .hero-mobile-stats span {
     display: grid;
     gap: 2px;
-    min-height: 64px;
+    min-height: 62px;
     align-content: center;
-    padding: 11px 10px;
-    background: rgba(255, 255, 255, 0.92);
-    color: var(--muted);
+    padding: 11px 10px 10px;
+    border: 1px solid rgba(204, 164, 59, 0.38);
+    border-radius: var(--radius);
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.76);
     font-size: 0.76rem;
     line-height: 1.1;
+    backdrop-filter: blur(14px);
   }
 
   .hero-mobile-stats strong {
-    color: var(--ink);
+    color: var(--white);
     font-size: 0.98rem;
     line-height: 1;
   }
@@ -927,8 +919,8 @@ textarea {
   }
 
   .hero-inner {
-    min-height: 770px;
-    padding: 34px 0 124px;
+    min-height: calc(100svh - 64px);
+    padding: 210px 0 168px;
   }
 
   .hero-copy {
@@ -941,39 +933,21 @@ textarea {
   }
 
   .hero-actions {
-    flex-direction: column;
-    align-items: stretch;
-    width: min(100%, 380px);
-    margin-top: 22px;
+    display: none;
   }
 
   .hero-actions .button {
     width: 100%;
   }
 
-  .hero-mobile-card {
-    grid-template-columns: 0.82fr 1fr;
-    min-height: 126px;
-    margin-top: 14px;
-  }
-
-  .hero-mobile-card img,
-  .hero-mobile-panel {
-    min-height: 126px;
-  }
-
-  .hero-mobile-panel {
-    padding: 12px;
-  }
-
-  .hero-mobile-panel strong {
-    font-size: 0.94rem;
-  }
-
   .hero-mobile-stats span {
-    min-height: 50px;
+    min-height: 56px;
     padding: 8px;
     font-size: 0.7rem;
+  }
+
+  .hero-mobile-stats {
+    display: none;
   }
 
   .hero-mobile-stats strong {
@@ -1096,55 +1070,17 @@ textarea {
   }
 
   .hero-inner {
-    min-height: 700px;
-    padding-top: 26px;
-  }
-
-  .hero .eyebrow {
-    order: 1;
-  }
-
-  .hero h1 {
-    order: 2;
-  }
-
-  .hero-mobile-card {
-    order: 3;
-    min-height: 112px;
-    margin-top: 16px;
-  }
-
-  .hero-mobile-card img,
-  .hero-mobile-panel {
-    min-height: 112px;
-  }
-
-  .hero-mobile-panel {
-    padding: 10px;
-  }
-
-  .hero-mobile-panel span {
-    font-size: 0.62rem;
-  }
-
-  .hero-mobile-panel strong {
-    font-size: 0.78rem;
-    line-height: 1.18;
-  }
-
-  .hero .lead {
-    order: 4;
-  }
-
-  .hero-actions {
-    order: 5;
-  }
-
-  .hero-actions .button-secondary {
-    display: none;
+    min-height: calc(100svh - 64px);
+    padding-top: 190px;
+    padding-bottom: 158px;
   }
 
   .hero-mobile-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero-mobile-stats span:last-child {
     display: none;
   }
+
 }
