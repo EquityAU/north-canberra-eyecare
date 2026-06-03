@@ -726,7 +726,7 @@ textarea {
     bottom: auto;
     left: 0;
     height: 42%;
-    background: url("assets/eye-test.webp") center / cover no-repeat;
+    background: url("assets/clinic-hero.webp") 52% center / cover no-repeat;
     opacity: 1;
     filter: saturate(0.92) contrast(1);
     transform: none;
